@@ -17,9 +17,9 @@ const listRef = document.querySelector(".js-gallery");
 
 const createImgList = images
   .map(
-    (obj) =>
+    ({ url, alt }) =>
       `<li>
-        <img src="${obj.url}" alt="${obj.alt}" width="300">
+        <img src="${url}" alt="${alt}" width="300">
        </li>`
   )
   .join("");

@@ -8,9 +8,7 @@ const btnCreateRef = document.querySelector("[data-create]");
 const btnDestroyRef = document.querySelector("[data-destroy]");
 const divBoxesRef = document.querySelector("#boxes");
 
-let count = 0;
-let width = 30;
-let height = 30;
+let size = 30;
 const amountOfDiv = [];
 
 function createBoxes(amount) {
@@ -20,15 +18,13 @@ function createBoxes(amount) {
     const div = document.createElement("div");
     const getColor = getRandomHexColor();
 
-    div.style.width = width + "px";
-    div.style.height = height + "px";
+    div.style.width = size + "px";
+    div.style.height = size + "px";
     div.style.backgroundColor = `${getColor}`;
 
     amountOfDiv.push(div);
 
-    count += 1;
-    width += 10;
-    height += 10;
+    size += 10;
   }
   divBoxesRef.append(...amountOfDiv);
 }
